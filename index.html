@@ -15,6 +15,10 @@
 
         <title>인공지능 테스트</title>
         <link rel="stylesheet" href="style.css" />
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e64b3727e862b06">
+        </script>
+        
     </head>
 
     <body>
@@ -58,11 +62,7 @@
         </section>
         <section class="youtube">
             <div class="youtube-cover d-flex flex-row-reverse">
-                <a
-                    href="https://www.youtube.com/watch?v=ZTJjW7XuHIY&list=PLU9-uwewPMe2-vtJAgWB6SNhHcTjJDgEO"
-                    class="youtube-link"
-                    >당신도 '나만의 테스트'를 만들어보고 싶으면 이 링크로....</a
-                >
+                
                 <img src="" alt="" class="youtube-link" />
                 <img src="" alt="" class="youtube-icon" />
             </div>
@@ -97,16 +97,27 @@
                 <img class="file-upload-image" id="face-image" src="#" alt="your image" />
                 <p class="result-message"></p>
                 <div id="label-container"></div>
-                <div class="image-title-wrap">
-                    <button type="button" onclick="removeUpload()" class="remove-image">
-                        Remove <span class="image-title">Uploaded Image</span>
+                <div id="loading" class="animated bounce">
+                    <span class="sr-only"><!--Loading...--></span>
+                </div>
+                <p class="text-center"><!-- 분석중....--></p>
+            </div>    
+
+            <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+            
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_inline_share_toolbox_6lz1"></div>
+                    
+            <div class="image-title-wrap">
+                    <button type="button p-2" onclick="window.location.reload()" class="try-again-btn">
+                        <span class="try-again-text">다른 사진으로 재시도</span>
                     </button>
                 </div>
-            </div>
         </div>
+       
 
         <div id="webcam-container"></div>
-        <div id="label-container"></div>
+
         <div id="disqus_thread"></div>
         <script>
             /**
